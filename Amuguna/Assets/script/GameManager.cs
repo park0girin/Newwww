@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class BulletPool : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public TextMeshPro BulletCount;
@@ -21,7 +21,7 @@ public class BulletPool : MonoBehaviour
 
     void Update()
     {
-        BulletCount.text = "Bullet Count : " + bulletPool.Count;
+        if (bulletPool.Count > 0) BulletCount.text = "Bullet Count : " + bulletPool.Count;
         if (Input.GetMouseButtonDown(0))
         {
             FireBullet();
@@ -38,6 +38,7 @@ public class BulletPool : MonoBehaviour
         else
         {
             Debug.Log("남은 총알 없음");
+            BulletCount.text = "Bullet pool is empty.";
         }
     }
 
