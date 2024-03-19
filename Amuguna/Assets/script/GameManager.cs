@@ -22,7 +22,7 @@ public class BulletPool : MonoBehaviour
     void Update()
     {
         BulletCount.text = "Bullet Count : " + bulletPool.Count;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             FireBullet();
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float bulletshot = 6.0f;
     
@@ -14,9 +14,5 @@ public class bullet : MonoBehaviour
     {
         transform.Translate(Vector3.right * bulletshot * Time.deltaTime);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
-        if (other.gameObject.name == "RightBox") gameObject.SetActive(false); 
-    }
+
 }
