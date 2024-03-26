@@ -46,11 +46,6 @@ public class MyQueue<T>
     // Dequeue
     public T Dequeue()
     {
-        if (head == null)
-        {
-            
-        }
-
         T data = head.data;
         head = head.next;
         if (head == null)
